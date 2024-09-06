@@ -1,97 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yağmur Efekti ve Airdrop Resmi</title>
+    <title>Yağmur Efekti</title>
     <style>
         body {
             margin: 0;
-            height: 100vh;
+            padding: 0;
             background-color: black;
             overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
             position: relative;
+            height: 100vh;
         }
-
-        .rain-container {
-            position: absolute;
-            top: -150px;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: start;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .rain {
+        .raindrop {
             position: absolute;
             width: 100px;
             height: 100px;
-            background-image: url('file-tHdeiRzdDrOqDf3inQuuRtFo');
-            background-size: contain;
-            animation: rain-fall 5s linear infinite;
+            background-image: url('https://files.fm/u/4zyqh9kpr6');
+            background-size: cover;
+            opacity: 0.7;
+            z-index: 10; /* Z-index değerini yüksek yaparak en üstte olmasını sağlar */
+            animation: fall 3s infinite linear;
         }
-
-        @keyframes rain-fall {
-            0% {
-                top: -150px;
+        @keyframes fall {
+            from {
+                transform: translateY(-100%);
             }
-            100% {
-                top: 100vh;
+            to {
+                transform: translateY(100vh);
             }
-        }
-
-        .airdrop {
-            width: 300px;
-            height: auto;
-            background-image: url('file-wfqxcq4hGlbBAxv5aAYt9vDd');
-            background-size: contain;
-            background-repeat: no-repeat;
-            z-index: 2;
-            margin-bottom: 20px;
-        }
-
-        .text {
-            color: white;
-            font-size: 20px;
-            font-family: Arial, sans-serif;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .share-button {
-            background-color: #ffcc00;
-            border: none;
-            color: black;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .share-button:hover {
-            background-color: #e6b800;
         }
     </style>
 </head>
 <body>
-    <div class="rain-container">
-        <div class="rain"></div>
-    </div>
-    <div class="airdrop"></div>
-    <div class="text">50 invite barabar = 100USDT</div>
-    <a href="https://t.me/k4miran_sndi?start=dastxos" target="_blank">
-        <button class="share-button">Share</button>
-    </a>
+    <!-- Yağmur damlalarını oluşturmak için JavaScript -->
+    <script>
+        function createRaindrop() {
+            const raindrop = document.createElement('div');
+            raindrop.classList.add('raindrop');
+            raindrop.style.left = `${Math.random() * 100}vw`;
+            raindrop.style.animationDuration = `${Math.random() * 2 + 3}s`;
+            raindrop.style.animationDelay = `${Math.random() * 5}s`;
+            document.body.appendChild(raindrop);
+
+            // Her damla için bir süre sonra kaldırılmasını sağlar
+            setTimeout(() => {
+                raindrop.remove();
+            }, 8000);
+        }
+
+        // 50 yağmur damlası oluştur
+        for (let i = 0; i < 50; i++) {
+            createRaindrop();
+        }
+
+        // Sonsuz döngü oluştur
+        setInterval(() => {
+            createRaindrop();
+        }, 1000);  // Her 1 saniyede bir yeni damla oluştur
+    </script>
 </body>
 </html>
