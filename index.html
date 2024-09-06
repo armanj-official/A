@@ -13,33 +13,64 @@
             background: url('https://files.fm/u/4zyqh9kpr6') repeat-y; /* Arka plan resmi */
             background-size: 100px 100px; /* Resmin boyutunu ayarla */
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             position: relative;
+            font-family: Arial, sans-serif; /* Modern font */
+        }
+        .header {
+            position: absolute;
+            top: 20px;
+            font-size: 32px;
+            color: #f8f9fa;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Metin gölgesi */
+            z-index: 10; /* Üstte görünmesini sağlar */
+        }
+        .button-info {
+            position: absolute;
+            top: 80px; /* Butonun üstünde yer alır */
+            font-size: 18px;
+            color: #f8f9fa;
+            background-color: rgba(0, 0, 0, 0.5); /* Yarı şeffaf arka plan */
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Hafif gölge efekti */
+            z-index: 10; /* Üstte görünmesini sağlar */
         }
         .button {
             position: absolute;
             padding: 15px 30px;
             font-size: 20px;
-            color: white;
-            background-color: #0088cc;
+            color: #ffffff;
+            background-color: #007bff;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
-            z-index: 10; /* Butonun üstte görünmesini sağlar */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Hafif gölge efekti */
+            transition: background-color 0.3s, transform 0.2s; /* Geçiş efektleri */
+            z-index: 10; /* Üstte görünmesini sağlar */
         }
-        @keyframes fall {
-            from {
-                transform: translateY(-100%);
-            }
-            to {
-                transform: translateY(100vh);
-            }
+        .button:hover {
+            background-color: #0056b3; /* Hover etkisi */
+            transform: scale(1.05); /* Hover etkisi */
+        }
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 16px;
+            color: #f8f9fa;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Metin gölgesi */
+            z-index: 10; /* Üstte görünmesini sağlar */
         }
     </style>
 </head>
 <body>
+    <div class="header">FREE KAMİRAN MİNİNG</div>
+    <div class="button-info">50 invait = 100 USDT</div>
     <button class="button" onclick="shareMessage()">SHARE</button>
+    <div class="footer">49 invaita qabil nakm hhhh</div>
 
     <script>
         function shareMessage() {
