@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yağmur Efekti ve Airdrop Resmi</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: black;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .rain-container {
+            position: absolute;
+            top: -150px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .rain {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-image: url('/mnt/data/20240906_170748.png');
+            background-size: contain;
+            animation: rain-fall 5s linear infinite;
+        }
+
+        @keyframes rain-fall {
+            0% {
+                top: -150px;
+            }
+            100% {
+                top: 100vh;
+            }
+        }
+
+        .airdrop {
+            width: 300px;
+            height: auto;
+            background-image: url('/mnt/data/20240906_170939.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 2;
+            margin-bottom: 20px;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .share-button {
+            background-color: #ffcc00;
+            border: none;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .share-button:hover {
+            background-color: #e6b800;
+        }
+    </style>
+</head>
+<body>
+    <div class="rain-container">
+        <div class="rain"></div>
+    </div>
+    <div class="airdrop"></div>
+    <div class="text">50 invite barabar = 100USDT</div>
+    <a href="https://t.me/k4miran_sndi?start=dastxoş" target="_blank">
+        <button class="share-button">Share</button>
+    </a>
+</body>
+  </html>
+  
