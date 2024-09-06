@@ -10,8 +10,7 @@
             padding: 0;
             overflow: hidden;
             height: 100vh;
-            background: url('https://files.fm/u/4zyqh9kpr6') repeat-y; /* Arka plan resmi */
-            background-size: 100px 100px; /* Resmin boyutunu ayarla */
+            background: linear-gradient(135deg, #2b2d42, #8d99ae); /* Renkli arka plan geçişi */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -68,6 +67,28 @@
             animation: fadeIn 2s ease-in-out 1.5s;
             z-index: 10;
         }
+        .anime-sticker {
+            position: absolute;
+            width: 150px;
+            height: auto;
+            z-index: 5;
+        }
+        .anime1 {
+            top: 20%;
+            left: 10%;
+            animation: float 6s infinite ease-in-out;
+        }
+        .anime2 {
+            top: 25%;
+            right: 10%;
+            animation: float 8s infinite ease-in-out;
+        }
+        .anime3 {
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: float 7s infinite ease-in-out;
+        }
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -78,6 +99,11 @@
                 transform: translateY(0);
             }
         }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
@@ -85,6 +111,10 @@
     <div class="button-info">50 INVITA = 100 USDT</div>
     <button class="button" onclick="shareMessage()">SHARE</button>
     <div class="footer">49 INVITA QABIL NAKM HHHH</div>
+
+    <img src="https://example.com/anime1.png" alt="Anime Sticker 1" class="anime-sticker anime1">
+    <img src="https://example.com/anime2.png" alt="Anime Sticker 2" class="anime-sticker anime2">
+    <img src="https://example.com/anime3.png" alt="Anime Sticker 3" class="anime-sticker anime3">
 
     <script>
         function shareMessage() {
