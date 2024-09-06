@@ -67,39 +67,42 @@
             animation: fadeIn 2s ease-in-out 1.5s;
             z-index: 10;
         }
-        .rain {
+        .crypto-sticker {
             position: absolute;
             width: 100px;
             height: 100px;
-            background: url('https://files.fm/u/62a4egt899') no-repeat;
-            background-size: 100px 100px;
+            background-size: cover;
             z-index: 5;
-            animation: fall 1s linear infinite;
+            animation: float 4s infinite ease-in-out;
         }
-        .rain:nth-child(2) {
+        .crypto1 {
+            top: 10%;
             left: 10%;
-            animation-duration: 1.2s;
-            animation-delay: 0.1s;
+            background-image: url('https://example.com/crypto1.png'); /* Kripto sticker 1 */
+            animation-duration: 6s;
+            animation-delay: 0s;
         }
-        .rain:nth-child(3) {
-            left: 30%;
-            animation-duration: 1.5s;
-            animation-delay: 0.3s;
+        .crypto2 {
+            top: 20%;
+            right: 15%;
+            background-image: url('https://example.com/crypto2.png'); /* Kripto sticker 2 */
+            animation-duration: 7s;
+            animation-delay: 2s;
         }
-        .rain:nth-child(4) {
+        .crypto3 {
+            bottom: 20%;
+            left: 35%;
+            background-image: url('https://example.com/crypto3.png'); /* Kripto sticker 3 */
+            animation-duration: 8s;
+            animation-delay: 4s;
+        }
+        .crypto4 {
+            top: 40%;
             left: 50%;
-            animation-duration: 1.8s;
-            animation-delay: 0.5s;
-        }
-        .rain:nth-child(5) {
-            left: 70%;
-            animation-duration: 1.2s;
-            animation-delay: 0.7s;
-        }
-        .rain:nth-child(6) {
-            left: 90%;
-            animation-duration: 1.4s;
-            animation-delay: 0.9s;
+            transform: translateX(-50%);
+            background-image: url('https://example.com/crypto4.png'); /* Kripto sticker 4 */
+            animation-duration: 5s;
+            animation-delay: 6s;
         }
         @keyframes fadeIn {
             from {
@@ -111,9 +114,10 @@
                 transform: translateY(0);
             }
         }
-        @keyframes fall {
-            0% { transform: translateY(-100px); }
-            100% { transform: translateY(100vh); }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
         }
     </style>
 </head>
@@ -123,12 +127,10 @@
     <button class="button" onclick="shareMessage()">SHARE</button>
     <div class="footer">49 INVITA QABIL NAKM HHHH</div>
 
-    <div class="rain"></div>
-    <div class="rain"></div>
-    <div class="rain"></div>
-    <div class="rain"></div>
-    <div class="rain"></div>
-    <div class="rain"></div>
+    <div class="crypto-sticker crypto1"></div>
+    <div class="crypto-sticker crypto2"></div>
+    <div class="crypto-sticker crypto3"></div>
+    <div class="crypto-sticker crypto4"></div>
 
     <script>
         function shareMessage() {
