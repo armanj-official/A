@@ -67,27 +67,39 @@
             animation: fadeIn 2s ease-in-out 1.5s;
             z-index: 10;
         }
-        .anime-sticker {
+        .rain {
             position: absolute;
-            width: 150px;
-            height: auto;
+            width: 100px;
+            height: 100px;
+            background: url('https://files.fm/u/62a4egt899') no-repeat;
+            background-size: 100px 100px;
             z-index: 5;
+            animation: fall 1s linear infinite;
         }
-        .anime1 {
-            top: 20%;
+        .rain:nth-child(2) {
             left: 10%;
-            animation: float 6s infinite ease-in-out;
+            animation-duration: 1.2s;
+            animation-delay: 0.1s;
         }
-        .anime2 {
-            top: 25%;
-            right: 10%;
-            animation: float 8s infinite ease-in-out;
+        .rain:nth-child(3) {
+            left: 30%;
+            animation-duration: 1.5s;
+            animation-delay: 0.3s;
         }
-        .anime3 {
-            bottom: 20%;
+        .rain:nth-child(4) {
             left: 50%;
-            transform: translateX(-50%);
-            animation: float 7s infinite ease-in-out;
+            animation-duration: 1.8s;
+            animation-delay: 0.5s;
+        }
+        .rain:nth-child(5) {
+            left: 70%;
+            animation-duration: 1.2s;
+            animation-delay: 0.7s;
+        }
+        .rain:nth-child(6) {
+            left: 90%;
+            animation-duration: 1.4s;
+            animation-delay: 0.9s;
         }
         @keyframes fadeIn {
             from {
@@ -99,10 +111,9 @@
                 transform: translateY(0);
             }
         }
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0); }
+        @keyframes fall {
+            0% { transform: translateY(-100px); }
+            100% { transform: translateY(100vh); }
         }
     </style>
 </head>
@@ -112,9 +123,12 @@
     <button class="button" onclick="shareMessage()">SHARE</button>
     <div class="footer">49 INVITA QABIL NAKM HHHH</div>
 
-    <img src="https://example.com/anime1.png" alt="Anime Sticker 1" class="anime-sticker anime1">
-    <img src="https://example.com/anime2.png" alt="Anime Sticker 2" class="anime-sticker anime2">
-    <img src="https://example.com/anime3.png" alt="Anime Sticker 3" class="anime-sticker anime3">
+    <div class="rain"></div>
+    <div class="rain"></div>
+    <div class="rain"></div>
+    <div class="rain"></div>
+    <div class="rain"></div>
+    <div class="rain"></div>
 
     <script>
         function shareMessage() {
