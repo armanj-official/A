@@ -8,8 +8,8 @@
     /* Temel stil */
     body {
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #2a2a2a, #000); /* Arka planda degrade renk */
-      color: #f0f0f0; /* Yazı rengi */
+      background: linear-gradient(135deg, #2a2a2a, #000, #1e1e1e); /* Arka planda degrade renk */
+      color: #f0f0f0;
       margin: 0;
       padding: 0;
       text-align: center;
@@ -18,33 +18,54 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      animation: backgroundChange 5s infinite alternate; /* Arka plan animasyonu */
     }
 
     /* Başlık stil */
     h1 {
-      font-size: 3em;
+      font-size: 4em;
       font-weight: bold;
       color: #00bfff;
       margin: 20px 0;
-      text-shadow: 2px 2px 8px rgba(0, 191, 255, 0.6); /* Başlık için ışıklı gölge efekti */
+      text-shadow: 2px 2px 8px rgba(0, 191, 255, 0.6);
+      letter-spacing: 2px;
+      transition: transform 0.3s ease; /* Başlık animasyonu */
+    }
+
+    h1:hover {
+      transform: scale(1.1); /* Başlık üzerine gelindiğinde büyüme efekti */
     }
 
     /* Alt yazı stil */
     .subtitle {
-      font-size: 1.2em;
+      font-size: 1.3em;
       margin: 10px 0;
       font-style: italic;
-      color: #bbb; /* Gri tonlarında */
+      color: #bbb;
+      text-shadow: 1px 1px 5px rgba(0, 191, 255, 0.5);
     }
 
     /* Bağlantılar bölümü */
     .links {
-      margin-top: 40px;
-      font-size: 1.2em;
+      margin-top: 50px;
+      font-size: 1.3em;
+      transition: all 0.3s ease;
     }
 
     .links p {
       margin: 15px 0;
+      padding: 12px;
+      background: rgba(0, 191, 255, 0.2); /* Bağlantılar için arka plan */
+      border-radius: 12px;
+      display: inline-block;
+      width: 80%;
+      max-width: 400px;
+      transition: transform 0.3s ease;
+    }
+
+    .links p:hover {
+      transform: scale(1.05); /* Bağlantı kutuları üzerine gelindiğinde büyüme */
+      background: rgba(0, 191, 255, 0.4); /* Hover sırasında arka plan rengi değişimi */
     }
 
     .links a {
@@ -54,20 +75,21 @@
       transition: color 0.3s ease, transform 0.3s ease;
     }
 
-    /* Bağlantı hover efekti */
     .links a:hover {
       color: #00bfff;
-      transform: scale(1.1); /* Bağlantılara tıklanabilirlik efekti */
       text-decoration: underline;
+      transform: scale(1.1); /* Bağlantılar hover efekti */
     }
 
-    /* Renkli çerçeve ve yuvarlak köşeler */
-    .links p {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 10px;
-      border-radius: 10px;
+    /* Arka plan geçiş animasyonu */
+    @keyframes backgroundChange {
+      0% {
+        background: linear-gradient(135deg, #2a2a2a, #000);
+      }
+      100% {
+        background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+      }
     }
-
   </style>
 </head>
 <body>
@@ -83,7 +105,7 @@
   <div class="links">
     <p>1. Telegram channel | <a href="https://t.me/Arrmanj" target="_blank">t.me/Arrmanj</a></p>
     <p>2. Twitter account | <a href="https://x.com/arrrmanj" target="_blank">x.com/arrrmanj</a></p>
-    <p>3. YouTube channel | <a href="https://www.youtube.com/@Arrmanj" target="_blank">youtube.com/@Arrmanj</a></p>
+    <p>3. YT channel | <a href="https://www.youtube.com/@Arrmanj" target="_blank">youtube.com/@Arrmanj</a></p>
   </div>
 
 </body>
