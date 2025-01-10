@@ -11,16 +11,7 @@
       color: white;
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
       text-align: center;
-    }
-
-    .container {
-      max-width: 600px;
-      padding: 20px;
     }
 
     .profile-image {
@@ -29,22 +20,23 @@
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid #fff;
-      margin-bottom: 20px;
+      margin-top: 20px;
     }
 
     h1 {
       font-size: 2em;
       font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.1em;
       margin: 10px 0;
     }
 
+    .subtitle {
+      font-size: 1.1em;
+      margin: 10px 0;
+      font-style: italic;
+    }
+
     .links {
-      margin-top: 20px;
+      margin-top: 40px;
     }
 
     .links a {
@@ -65,23 +57,21 @@
 </head>
 <body>
 
-  <div class="container">
-    <!-- Yuvarlak resim -->
-    <img src="IMG_20250111_012234_128.jpg" alt="Profile Picture" class="profile-image">
-    
-    <!-- İsim -->
-    <h1>Armanj</h1>
-    
-    <!-- Alt metin -->
-    <p>Official website Arrmanj.</p>
-    <p>Links to my accounts me 🔗</p>
+  <!-- Yuvarlak resim -->
+  <img src="IMG_20250111_012234_128.jpg" alt="Profile Picture" class="profile-image">
+  
+  <!-- İsim -->
+  <h1>Armanj</h1>
+  
+  <!-- Alt metin -->
+  <p class="subtitle">Official website Arrmanj.</p>
+  <p class="subtitle">Links to my accounts me 🔗</p>
 
-    <!-- Bağlantılar -->
-    <div class="links">
-      <p>1. Telegram channel | <a href="https://t.me/Arrmanj" target="_blank">t.me/Arrmanj</a></p>
-      <p>2. Twitter account | <a href="https://x.com/arrrmanj" target="_blank">x.com/arrrmanj</a></p>
-      <p>3. YouTube channel | <a href="https://www.youtube.com/@Arrmanj" target="_blank">youtube.com/@Arrmanj</a></p>
-    </div>
+  <!-- Bağlantılar -->
+  <div class="links">
+    <p>1. Telegram channel | <a href="https://t.me/Arrmanj" target="_blank">t.me/Arrmanj</a></p>
+    <p>2. Twitter account | <a href="https://x.com/arrrmanj" target="_blank">x.com/arrrmanj</a></p>
+    <p>3. YouTube channel | <a href="https://www.youtube.com/@Arrmanj" target="_blank">youtube.com/@Arrmanj</a></p>
   </div>
 
 </body>
