@@ -5,65 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Armanj Official</title>
   <style>
+    /* Temel stil */
     body {
       font-family: 'Arial', sans-serif;
-      background-color: black;
-      color: white;
+      background: linear-gradient(135deg, #2a2a2a, #000); /* Arka planda degrade renk */
+      color: #f0f0f0; /* Yazı rengi */
       margin: 0;
       padding: 0;
       text-align: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
 
-    .profile-image {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #fff;
-      margin-top: 20px;
-    }
-
+    /* Başlık stil */
     h1 {
-      font-size: 2em;
+      font-size: 3em;
       font-weight: bold;
-      margin: 10px 0;
+      color: #00bfff;
+      margin: 20px 0;
+      text-shadow: 2px 2px 8px rgba(0, 191, 255, 0.6); /* Başlık için ışıklı gölge efekti */
     }
 
+    /* Alt yazı stil */
     .subtitle {
-      font-size: 1.1em;
+      font-size: 1.2em;
       margin: 10px 0;
       font-style: italic;
+      color: #bbb; /* Gri tonlarında */
     }
 
+    /* Bağlantılar bölümü */
     .links {
       margin-top: 40px;
+      font-size: 1.2em;
+    }
+
+    .links p {
+      margin: 15px 0;
     }
 
     .links a {
       text-decoration: none;
-      color: #00bfff;
-      font-size: 1.1em;
+      color: #ff1493;
+      font-weight: bold;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
 
+    /* Bağlantı hover efekti */
     .links a:hover {
+      color: #00bfff;
+      transform: scale(1.1); /* Bağlantılara tıklanabilirlik efekti */
       text-decoration: underline;
     }
 
+    /* Renkli çerçeve ve yuvarlak köşeler */
     .links p {
-      font-size: 1.2em;
-      margin: 10px 0;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 10px;
     }
+
   </style>
 </head>
 <body>
-
-  <!-- Yuvarlak resim -->
-  <img src="IMG_20250111_012234_128.jpg" alt="Profile Picture" class="profile-image">
   
-  <!-- İsim -->
+  <!-- Başlık -->
   <h1>Armanj</h1>
   
-  <!-- Alt metin -->
+  <!-- Alt yazılar -->
   <p class="subtitle">Official website Arrmanj.</p>
   <p class="subtitle">Links to my accounts me 🔗</p>
 
