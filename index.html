@@ -7,44 +7,50 @@
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background-color: white;
+      background-color: black;
+      color: white;
       margin: 0;
       padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
       text-align: center;
-      color: #333;
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 20px;
     }
 
     .profile-image {
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      margin-top: 20px;
       object-fit: cover;
-      border: 3px solid #007bff;
+      border: 3px solid #fff;
+      margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 1.8em;
+      font-size: 2em;
       font-weight: bold;
-      margin-top: 10px;
+      margin-bottom: 10px;
     }
 
     p {
-      font-size: 1em;
-      margin: 15px 0;
-      font-style: italic;
+      font-size: 1.1em;
+      margin: 10px 0;
     }
 
     .links {
       margin-top: 20px;
-      text-align: left;
-      display: inline-block;
     }
 
     .links a {
       text-decoration: none;
-      color: #007bff;
-      font-size: 1em;
+      color: #00bfff;
+      font-size: 1.1em;
     }
 
     .links a:hover {
@@ -52,28 +58,30 @@
     }
 
     .links p {
-      font-size: 1.1em;
-      margin: 5px 0;
+      font-size: 1.2em;
+      margin: 10px 0;
     }
   </style>
 </head>
 <body>
 
-  <!-- Yuvarlak resim -->
-  <img src="IMG_20250111_012234_128.jpg" alt="Profile Picture" class="profile-image">
-  
-  <!-- İsim -->
-  <h1>Armanj</h1>
-  
-  <!-- Alt metin -->
-  <p>Official website Arrmanj.</p>
-  <p>Links to my accounts me 🔗</p>
+  <div class="container">
+    <!-- Yuvarlak resim -->
+    <img src="IMG_20250111_012234_128.jpg" alt="Profile Picture" class="profile-image">
+    
+    <!-- İsim -->
+    <h1>Armanj</h1>
+    
+    <!-- Alt metin -->
+    <p>Official website Arrmanj.</p>
+    <p>Links to my accounts me 🔗</p>
 
-  <!-- Bağlantılar -->
-  <div class="links">
-    <p>1. Telegram channel | <a href="https://t.me/Arrmanj" target="_blank">t.me/Arrmanj</a></p>
-    <p>2. Twitter account | <a href="https://x.com/arrrmanj" target="_blank">x.com/arrrmanj</a></p>
-    <p>3. YouTube channel | <a href="https://www.youtube.com/@Arrmanj" target="_blank">youtube.com/@Arrmanj</a></p>
+    <!-- Bağlantılar -->
+    <div class="links">
+      <p>1. Telegram channel | <a href="https://t.me/Arrmanj" target="_blank">t.me/Arrmanj</a></p>
+      <p>2. Twitter account | <a href="https://x.com/arrrmanj" target="_blank">x.com/arrrmanj</a></p>
+      <p>3. YouTube channel | <a href="https://www.youtube.com/@Arrmanj" target="_blank">youtube.com/@Arrmanj</a></p>
+    </div>
   </div>
 
 </body>
