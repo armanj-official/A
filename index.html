@@ -1,142 +1,70 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Token Satış İlanı</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            height: 100vh;
-            background: linear-gradient(135deg, #2b2d42, #8d99ae); /* Renkli arka plan geçişi */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            font-family: 'Arial', sans-serif; /* Modern font */
-        }
-        .header {
-            position: absolute;
-            top: 30px;
-            font-size: 36px;
-            color: #f8f9fa;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Metin gölgesi */
-            z-index: 10;
-            animation: fadeIn 2s ease-in-out;
-        }
-        .button-info {
-            position: absolute;
-            top: 100px;
-            font-size: 18px;
-            color: #f8f9fa;
-            background-color: rgba(0, 0, 0, 0.7); /* Yarı şeffaf arka plan */
-            padding: 15px 25px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); /* Hafif gölge efekti */
-            animation: fadeIn 2s ease-in-out 0.5s;
-            z-index: 10;
-        }
-        .button {
-            position: absolute;
-            padding: 20px 40px;
-            font-size: 24px;
-            color: #ffffff;
-            background-color: #28a745; /* Yeşil buton rengi */
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Hafif gölge efekti */
-            transition: background-color 0.3s, transform 0.2s;
-            animation: fadeIn 2s ease-in-out 1s;
-            z-index: 10;
-        }
-        .button:hover {
-            background-color: #218838; /* Hover etkisi */
-            transform: scale(1.05); /* Hover etkisi */
-        }
-        .footer {
-            position: absolute;
-            bottom: 30px;
-            font-size: 18px;
-            color: #f8f9fa;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Metin gölgesi */
-            animation: fadeIn 2s ease-in-out 1.5s;
-            z-index: 10;
-        }
-        .crypto-sticker {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background-size: cover;
-            z-index: 5;
-            animation: float 4s infinite ease-in-out;
-        }
-        .crypto1 {
-            top: 10%;
-            left: 10%;
-            background-image: url('https://example.com/crypto1.png'); /* Kripto sticker 1 */
-            animation-duration: 6s;
-            animation-delay: 0s;
-        }
-        .crypto2 {
-            top: 20%;
-            right: 15%;
-            background-image: url('https://example.com/crypto2.png'); /* Kripto sticker 2 */
-            animation-duration: 7s;
-            animation-delay: 2s;
-        }
-        .crypto3 {
-            bottom: 20%;
-            left: 35%;
-            background-image: url('https://example.com/crypto3.png'); /* Kripto sticker 3 */
-            animation-duration: 8s;
-            animation-delay: 4s;
-        }
-        .crypto4 {
-            top: 40%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-image: url('https://example.com/crypto4.png'); /* Kripto sticker 4 */
-            animation-duration: 5s;
-            animation-delay: 6s;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0); }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Armanj Official</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    header a {
+      font-size: 1.2em;
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    header a:hover {
+      text-decoration: underline;
+    }
+
+    header p {
+      font-size: 1em;
+      margin-top: 5px;
+      font-style: italic;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .news p {
+      font-size: 0.9em;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-    <div class="header">FREE KAMİRAN MİNİNG</div>
-    <div class="button-info">50 INVITA = 100 USDT</div>
-    <button class="button" onclick="shareMessage()">SHARE</button>
-    <div class="footer">49 INVITA QABIL NAKM HHHH</div>
-
-    <div class="crypto-sticker crypto1"></div>
-    <div class="crypto-sticker crypto2"></div>
-    <div class="crypto-sticker crypto3"></div>
-    <div class="crypto-sticker crypto4"></div>
-
-    <script>
-        function shareMessage() {
-            const telegramLink = 'https://t.me/k4miran_sndi?text=dastxoş';
-            window.open(telegramLink, '_blank');
-        }
-    </script>
+  <header>
+    <h1>Armanj Official</h1>
+    <a href="https://t.me/Arrmanj" target="_blank">https://t.me/Arrmanj</a>
+    <p>(Armanj Official real Telegram account)</p>
+  </header>
+  <main>
+    <div class="news">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae lacus et velit pharetra ullamcorper.</p>
+      <p>Curabitur sit amet mi in lorem cursus dictum. Nulla facilisi. Vivamus ac elit nec arcu convallis vehicula.</p>
+      <p>Ut id velit vitae mi dapibus sodales. Fusce auctor, justo vel cursus consequat, est odio pellentesque mi.</p>
+      <p>Donec quis augue vitae metus tempor consectetur. Mauris sit amet massa nec urna suscipit aliquet.</p>
+      <p>Sed luctus ligula vel odio interdum, sed auctor purus fringilla. Integer lacinia, ligula nec vehicula mollis.</p>
+    </div>
+  </main>
 </body>
 </html>
